@@ -26,6 +26,7 @@ export default () => {
         <h1 className="section__text">
           I’m Katleen, a french&nbsp;
           <span className="hoverlined">graphic and digital</span>
+          <br />
           <span className="hoverlined">designer</span>&nbsp;based in Bordeaux !
         </h1>
       </section>
