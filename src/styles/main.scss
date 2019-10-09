@@ -156,6 +156,28 @@ p {
 .profile__contact {
   text-decoration: underline;
 }
+.footer {
+  margin: 75px 117px 60px;
+}
+.footer p {
+  display: inline-block;
+}
+.footer__logo {
+  float: right;
+  padding-right: 10px;
+}
+.social {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 2.54px;
+  color: #000000;
+  text-transform: uppercase;
+  margin-right: 40px;
+}
 @media screen and (max-width: 768px) {
   .section__text,
   .work__title {
@@ -173,5 +195,12 @@ p {
     max-width: none;
     width: 100%;
     padding: 0;
+  }
+  .footer {
+    margin: 75px 0 30px;
+  }
+  .footer p {
+    width: 55%;
+    padding: 10px;
   }
 }

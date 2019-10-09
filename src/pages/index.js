@@ -3,6 +3,7 @@ import "../styles/main.scss"
 import Layout from "../components/layout"
 import Logo from "../assets/images/logo.svg"
 import handScroll from "../assets/images/hand-scroll.svg"
+import logoIcon from "../assets/images/logo-icon.svg"
 import { Link } from "gatsby"
 
 export default () => {
@@ -77,14 +78,27 @@ export default () => {
               Art direction, UI Design, branding, Illustration, typography,
               photomontage, retouche photo…
             </p>
-            <h3 className="profile__title">contact</h3>
+            <h3 className="profile__title">Contact</h3>
             <p className="profile__text profile__contact">
               contact@katleenlc.com
             </p>
           </div>
         </div>
       </section>
-      <footer></footer>
+      <footer className="footer">
+        <p>
+          <Link className="social">linkedin</Link>
+        </p>
+        <p>
+          <Link className="social">instagram</Link>
+        </p>
+        <p>
+          <Link className="social">pinterest</Link>
+        </p>
+        <div className="footer__logo">
+          <img src={logoIcon} alt="KLC Logo" />
+        </div>
+      </footer>
     </Layout>
   )
 }
