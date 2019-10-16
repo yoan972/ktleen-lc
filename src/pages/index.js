@@ -4,9 +4,9 @@ import Layout from "../components/layout"
 import Logo from "../assets/images/logo.svg"
 import handScroll from "../assets/images/hand-scroll.svg"
 import logoIcon from "../assets/images/logo-icon.svg"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
-export default () => {
+export default ({ data }) => {
   return (
     <Layout>
       <nav className="menu">
@@ -69,6 +69,21 @@ export default () => {
               </div>
             </div>
           </li>
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            <li className="works-list__item" key={node.id}>
+              <div className="work">
+                <Link to="/other" className="work__title">
+                  {node.frontmatter.title}
+                </Link>
+                <div className="work__subtitle">
+                  <p>{node.frontmatter.subtitle}</p>
+                </div>
+                <div className="work__img">
+                  <img alt={node.frontmatter.alt} src={node.frontmatter.img} />
+                </div>
+              </div>
+            </li>
+          ))}
         </ul>
       </section>
       <section id="profile" className="profile section">
@@ -126,3 +141,21 @@ export default () => {
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    allMarkdownRemark {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`
