@@ -39,16 +39,34 @@ export default () => {
         <ul className="works-list">
           <li className="works-list__item">
             <div className="work">
-              <Link to="/" className="work__title">
+              <Link to="/other" className="work__title">
                 Explicite.info
               </Link>
+              <div className="work__subtitle">
+                <p>Brand content, adverstising</p>
+              </div>
+              <div className="work__img">
+                <img
+                  alt="preview project"
+                  src="https://picsum.photos/id/337/680/379"
+                />
+              </div>
             </div>
           </li>
           <li className="works-list__item">
             <div className="work">
-              <Link to="/" className="work__title">
+              <Link to="/other" className="work__title">
                 Renault
               </Link>
+              <div className="work__subtitle">
+                <p>Brand content, adverstising</p>
+              </div>
+              <div className="work__img">
+                <img
+                  alt="preview project"
+                  src="https://picsum.photos/id/337/680/379"
+                />
+              </div>
             </div>
           </li>
         </ul>
@@ -87,13 +105,19 @@ export default () => {
       </section>
       <footer className="footer">
         <p>
-          <Link className="social">linkedin</Link>
+          <a href="/" className="social">
+            linkedin
+          </a>
         </p>
         <p>
-          <Link className="social">instagram</Link>
+          <a href="/" className="social">
+            instagram
+          </a>
         </p>
         <p>
-          <Link className="social">pinterest</Link>
+          <a href="/" className="social">
+            pinterest
+          </a>
         </p>
         <div className="footer__logo">
           <img src={logoIcon} alt="KLC Logo" />
