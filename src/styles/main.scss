@@ -121,6 +121,8 @@ img {
   text-decoration: none;
   position: relative;
   transition: 0.5s;
+  opacity: 1;
+  z-index: 2;
 }
 .profile__details {
   display: flex;
@@ -219,7 +221,7 @@ img {
   z-index: 1;
   width: 50%;
   transition: opacity 0.5s;
-  z-index: -1;
+  z-index: 1;
   max-width: 680px;
 
   @media (max-width: 968px) {
@@ -237,18 +239,33 @@ img {
     top: -185%;
   }
 }
-
-.work__title:hover {
-  z-index: 10;
-  color: #ffffff;
+.work__img:after {
+  content: "";
+  position: absolute;
+  background: #050118;
+  opacity: 0.2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
+.work__title:hover .work__title {
+  z-index: 10;
+  color: #ffffff;
+  opacity: 0.1;
+}
+.lighter {
+  opacity: 0.2;
+}
+.current {
+  opacity: 1;
+}
 .work__title:hover ~ .work__subtitle {
   opacity: 1;
 }
 .work__title:hover ~ .work__img {
   opacity: 1;
-  z-index: 1;
 }
 
 @media screen and (max-width: 768px) {

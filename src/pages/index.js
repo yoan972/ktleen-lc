@@ -7,6 +7,17 @@ import logoIcon from "../assets/images/logo-icon.svg"
 import { Link, graphql } from "gatsby"
 
 export default ({ data }) => {
+  const handleOpacityHoverEffect = elem => {
+    elem.classList.contains("current")
+      ? elem.classList.remove("current")
+      : elem.classList.add("current")
+    const workList = document.querySelectorAll(".work__title")
+    workList.forEach(title => {
+      title.classList.contains("lighter")
+        ? title.classList.remove("lighter")
+        : title.classList.add("lighter")
+    })
+  }
   return (
     <Layout>
       <nav className="menu">
@@ -39,7 +50,12 @@ export default ({ data }) => {
         <ul className="works-list">
           <li className="works-list__item">
             <div className="work">
-              <Link to="/other" className="work__title">
+              <Link
+                to="/other"
+                className="work__title"
+                onMouseEnter={e => handleOpacityHoverEffect(e.target)}
+                onMouseLeave={e => handleOpacityHoverEffect(e.target)}
+              >
                 Explicite.info
               </Link>
               <div className="work__subtitle">
@@ -47,6 +63,7 @@ export default ({ data }) => {
               </div>
               <div className="work__img">
                 <img
+                  style={{ display: "block" }}
                   alt="preview project"
                   src="https://picsum.photos/id/337/680/379"
                 />
@@ -55,7 +72,12 @@ export default ({ data }) => {
           </li>
           <li className="works-list__item">
             <div className="work">
-              <Link to="/other" className="work__title">
+              <Link
+                to="/other"
+                className="work__title"
+                onMouseEnter={e => handleOpacityHoverEffect(e.target)}
+                onMouseLeave={e => handleOpacityHoverEffect(e.target)}
+              >
                 Renault
               </Link>
               <div className="work__subtitle">
@@ -63,6 +85,7 @@ export default ({ data }) => {
               </div>
               <div className="work__img">
                 <img
+                  style={{ display: "block" }}
                   alt="preview project"
                   src="https://picsum.photos/id/337/680/379"
                 />
@@ -72,14 +95,23 @@ export default ({ data }) => {
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <li className="works-list__item" key={node.id}>
               <div className="work">
-                <Link to="/other" className="work__title">
+                <Link
+                  to="/other"
+                  className="work__title"
+                  onMouseEnter={e => handleOpacityHoverEffect(e.target)}
+                  onMouseLeave={e => handleOpacityHoverEffect(e.target)}
+                >
                   {node.frontmatter.title}
                 </Link>
                 <div className="work__subtitle">
                   <p>{node.frontmatter.subtitle}</p>
                 </div>
                 <div className="work__img">
-                  <img alt={node.frontmatter.alt} src={node.frontmatter.img} />
+                  <img
+                    alt={node.frontmatter.alt}
+                    src={node.frontmatter.img}
+                    style={{ display: "block" }}
+                  />
                 </div>
               </div>
             </li>
