@@ -3,8 +3,9 @@ import "../styles/main.scss"
 import Layout from "../components/layout"
 import Logo from "../assets/images/logo.svg"
 import handScroll from "../assets/images/hand-scroll.svg"
-import logoIcon from "../assets/images/logo-icon.svg"
 import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
+import Footer from "../components/footer"
 
 export default ({ data }) => {
   const handleOpacityHoverEffect = elem => {
@@ -48,55 +49,11 @@ export default ({ data }) => {
           works
         </h2>
         <ul className="works-list">
-          <li className="works-list__item">
-            <div className="work">
-              <Link
-                to="/other"
-                className="work__title"
-                onMouseEnter={e => handleOpacityHoverEffect(e.target)}
-                onMouseLeave={e => handleOpacityHoverEffect(e.target)}
-              >
-                Explicite.info
-              </Link>
-              <div className="work__subtitle">
-                <p>Brand content, adverstising</p>
-              </div>
-              <div className="work__img">
-                <img
-                  style={{ display: "block" }}
-                  alt="preview project"
-                  src="https://picsum.photos/id/337/680/379"
-                />
-              </div>
-            </div>
-          </li>
-          <li className="works-list__item">
-            <div className="work">
-              <Link
-                to="/other"
-                className="work__title"
-                onMouseEnter={e => handleOpacityHoverEffect(e.target)}
-                onMouseLeave={e => handleOpacityHoverEffect(e.target)}
-              >
-                Renault
-              </Link>
-              <div className="work__subtitle">
-                <p>Brand content, adverstising</p>
-              </div>
-              <div className="work__img">
-                <img
-                  style={{ display: "block" }}
-                  alt="preview project"
-                  src="https://picsum.photos/id/337/680/379"
-                />
-              </div>
-            </div>
-          </li>
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <li className="works-list__item" key={node.id}>
               <div className="work">
                 <Link
-                  to="/other"
+                  to={node.frontmatter.path}
                   className="work__title"
                   onMouseEnter={e => handleOpacityHoverEffect(e.target)}
                   onMouseLeave={e => handleOpacityHoverEffect(e.target)}
@@ -107,9 +64,9 @@ export default ({ data }) => {
                   <p>{node.frontmatter.subtitle}</p>
                 </div>
                 <div className="work__img">
-                  <img
+                  <Img
                     alt={node.frontmatter.alt}
-                    src={node.frontmatter.img}
+                    fluid={node.frontmatter.img.childImageSharp.fluid}
                     style={{ display: "block" }}
                   />
                 </div>
@@ -150,26 +107,7 @@ export default ({ data }) => {
           </div>
         </div>
       </section>
-      <footer className="footer">
-        <p>
-          <a href="/" className="social">
-            linkedin
-          </a>
-        </p>
-        <p>
-          <a href="/" className="social">
-            instagram
-          </a>
-        </p>
-        <p>
-          <a href="/" className="social">
-            pinterest
-          </a>
-        </p>
-        <div className="footer__logo">
-          <img src={logoIcon} alt="KLC Logo" />
-        </div>
-      </footer>
+      <Footer />
     </Layout>
   )
 }
@@ -183,9 +121,18 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
+            subtitle
+            date
+            path
+            img {
+              childImageSharp {
+                fluid(maxWidth: 680, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            alt
           }
-          excerpt
         }
       }
     }
