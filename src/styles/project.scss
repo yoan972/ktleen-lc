@@ -1,5 +1,6 @@
 @import "font.scss";
 @import "common.scss";
+@import "theme.scss";
 
 .header-project {
   display: flex;
@@ -7,16 +8,8 @@
   margin: 60px 20px;
 }
 .header__page-index {
-  text-transform: uppercase;
-  font-family: "Aileron Regular", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 2.54px;
-  color: #000000;
+  width: 138px;
+  height: 39px;
 }
 .close-text {
   display: inline-block;
@@ -42,8 +35,7 @@
 }
 
 .project__title {
-  font-family: "Baskerville BT Bold", -apple-system, BlinkMacSystemFont,
-    sans-serif;
+  font-family: "Halant", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 50px;
   font-weight: bold;
   font-stretch: normal;
@@ -93,6 +85,7 @@
     color: #000000;
   }
   p {
+    font-family: "Aileron Light";
     font-size: 18px;
     font-weight: 300;
     font-stretch: normal;
@@ -112,7 +105,18 @@
 }
 
 @media screen and (max-width: 768px) {
+  .project__title {
+    font-size: 25px;
+  }
+  .project__subtitle {
+    font-size: 16px;
+  }
   .project-content__info {
+    padding: 0 40px 53px;
+    p,
+    h3 {
+      font-size: 14px;
+    }
     .mission,
     .other {
       width: 100%;

@@ -1,42 +1,4 @@
-@font-face {
-  font-family: "Baskerville Normal";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Baskerville Normal"),
-    url("../assets/font/baskvl.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Baskerville Regular";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Baskerville Regular"),
-    url("../assets/font/baskervi.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Baskerville BT Bold";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Baskerville BT Bold"),
-    url("../assets/font/BaskervilleBoldBT.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Baskerville BT Bold";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Baskerville BT Bold"),
-    url("../assets/font/baskerville bold bt.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Baskerville BT Bold Italic";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Baskerville BT Bold Italic"),
-    url("../assets/font/BaskervilleBoldItalicBT.woff") format("woff");
-}
+@import url("https://fonts.googleapis.com/css?family=Halant:400,700&display=swap");
 
 @font-face {
   font-family: "Aileron Regular";

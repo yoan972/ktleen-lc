@@ -1,6 +1,7 @@
 ---
 title: Explicite.info
 subtitle: UI design
+theme: explicite
 date: 2019-07-10
 path: /explicite-info
 img: ./../assets/images/projets/cover-explicite.jpg
