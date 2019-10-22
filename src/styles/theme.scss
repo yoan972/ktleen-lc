@@ -1,3 +1,12 @@
+.project__image1,
+.project__image2,
+.project__image3,
+.project__image4,
+.project__image5 {
+  animation-duration: 1s;
+  animation-name: slidein;
+}
+
 #explicite {
   .project__image1 {
     background: linear-gradient(#ffffff 25.9%, #f7f7f7 25.9%);

@@ -6,7 +6,7 @@ import "../styles/project.scss"
 import Footer from "../components/footer"
 import Logo from "../assets/images/logo.svg"
 
-export default function Project5({ data }) {
+export default function Project4({ data }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   return (
@@ -64,13 +64,6 @@ export default function Project5({ data }) {
               alt={frontmatter.image4.alt}
             />
           </div>
-          <div className="project__image5">
-            <Img
-              fadeIn={false}
-              fluid={frontmatter.image5.image.childImageSharp.fluid}
-              alt={frontmatter.image5.alt}
-            />
-          </div>
         </div>
       </div>
       <div className="next">
@@ -126,16 +119,6 @@ export const pageQuery = graphql`
           alt
         }
         image4 {
-          image {
-            childImageSharp {
-              fluid(maxWidth: 1440, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-          alt
-        }
-        image5 {
           image {
             childImageSharp {
               fluid(maxWidth: 1440, quality: 100) {

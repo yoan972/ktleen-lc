@@ -88,7 +88,7 @@
 
   h3 {
     font-family: "Aileron Black";
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 900;
     font-stretch: normal;
     font-style: normal;
@@ -113,6 +113,17 @@
   }
   .other {
     flex: 1;
+  }
+}
+
+@keyframes slidein {
+  from {
+    transform: translateY(10px);
+    opacity: 0.6;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
 
