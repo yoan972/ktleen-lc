@@ -9,6 +9,7 @@ exports.createPages = async ({ actions, graphql }) => {
           node {
             frontmatter {
               path
+              templateKey
             }
           }
         }
@@ -21,7 +22,9 @@ exports.createPages = async ({ actions, graphql }) => {
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
-      component: path.resolve(`src/templates/project.js`)
+      component: path.resolve(
+        `src/templates/${node.frontmatter.templateKey}.js`
+      )
     })
   })
 }

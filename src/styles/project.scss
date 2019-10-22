@@ -34,7 +34,12 @@
   height: 17px;
 }
 
-.project__title {
+.next {
+  max-width: 1440px;
+  margin: 100px auto 50px;
+}
+.project__title,
+.next__project-title {
   font-family: "Halant", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 50px;
   font-weight: bold;
@@ -45,7 +50,8 @@
   text-align: center;
   color: #000000;
 }
-.project__subtitle {
+.project__subtitle,
+.next__project {
   font-family: "Aileron Light";
   font-size: 24px;
   font-weight: 300;
@@ -56,8 +62,14 @@
   text-align: center;
   color: #000000;
 }
+.next__project a {
+  margin: 0;
+  text-decoration: none;
+  color: inherit;
+}
 
-.project__subtitle:before {
+.project__subtitle:before,
+.next__project:before {
   content: "";
   width: 30px;
   height: 2px;

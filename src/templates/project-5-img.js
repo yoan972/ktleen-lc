@@ -6,7 +6,7 @@ import "../styles/project.scss"
 import Footer from "../components/footer"
 import Logo from "../assets/images/logo.svg"
 
-export default function Project({ data }) {
+export default function Project5({ data }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
   return (
@@ -38,12 +38,42 @@ export default function Project({ data }) {
         <div id={frontmatter.theme}>
           <div className="project__image1">
             <Img
-              style={{ maxWidth: "1440px", margin: "auto" }}
               fluid={frontmatter.image1.image.childImageSharp.fluid}
               alt={frontmatter.image1.alt}
             />
           </div>
+          <div className="project__image2">
+            <Img
+              fluid={frontmatter.image2.image.childImageSharp.fluid}
+              alt={frontmatter.image2.alt}
+            />
+          </div>
+          <div className="project__image3">
+            <Img
+              fluid={frontmatter.image3.image.childImageSharp.fluid}
+              alt={frontmatter.image3.alt}
+            />
+          </div>
+          <div className="project__image4">
+            <Img
+              fluid={frontmatter.image4.image.childImageSharp.fluid}
+              alt={frontmatter.image4.alt}
+            />
+          </div>
+          <div className="project__image5">
+            <Img
+              fluid={frontmatter.image5.image.childImageSharp.fluid}
+              alt={frontmatter.image5.alt}
+            />
+          </div>
         </div>
+      </div>
+      <div className="next">
+        <p className="next__project-title">{frontmatter.title}</p>
+
+        <p className="next__project">
+          <Link to="/">Next project</Link>
+        </p>
       </div>
       <Footer />
     </div>
@@ -61,6 +91,46 @@ export const pageQuery = graphql`
         subtitle
         theme
         image1 {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1440, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          alt
+        }
+        image2 {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1440, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          alt
+        }
+        image3 {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1440, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          alt
+        }
+        image4 {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1440, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          alt
+        }
+        image5 {
           image {
             childImageSharp {
               fluid(maxWidth: 1440, quality: 100) {

@@ -1,5 +1,55 @@
 #explicite {
   .project__image1 {
-    background: linear-gradient(#ffffff 24.2%, #f7f7f7 24.2%);
+    background: linear-gradient(#ffffff 25.9%, #f7f7f7 25.9%);
+
+    @media (max-width: 768px) {
+      padding: 0 20px;
+    }
+
+    div {
+      max-width: 940px;
+      margin: auto;
+    }
+  }
+  .project__image2,
+  .project__image4 {
+    padding: 100px 0;
+
+    @media (max-width: 768px) {
+      padding: 40px 20px;
+    }
+
+    div {
+      max-width: 940px;
+      object-fit: contain;
+      margin: auto;
+    }
+  }
+  .project__image3 {
+    background-color: #000000;
+    padding-top: 100px;
+
+    @media (max-width: 768px) {
+      padding: 40px 20px 0;
+    }
+
+    div {
+      max-width: 939px;
+      object-fit: contain;
+      margin: auto;
+    }
+  }
+  .project__image5 {
+    background-color: #f7f7f7;
+    padding-top: 100px;
+
+    @media (max-width: 768px) {
+      padding: 0 20px;
+    }
+    div {
+      max-width: 940px;
+      object-fit: contain;
+      margin: auto;
+    }
   }
 }

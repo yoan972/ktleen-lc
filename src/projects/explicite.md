@@ -1,4 +1,5 @@
 ---
+templateKey: project-5-img
 title: Explicite.info
 subtitle: UI design
 theme: explicite
@@ -7,7 +8,19 @@ path: /explicite-info
 img: ./../assets/images/projets/cover-explicite.jpg
 alt: explicite
 image1:
-  image: ./../assets/images/projets/v-1.jpg
+  image: ./../assets/images/projets/explicite/v-1@2x.jpg
+  alt: presentational
+image2:
+  image: ./../assets/images/projets/explicite/img-expli-2.jpg
+  alt: presentational
+image3:
+  image: ./../assets/images/projets/explicite/img-expli-3.jpg
+  alt: presentational
+image4:
+  image: ./../assets/images/projets/explicite/img-expli-4.jpg
+  alt: presentational
+image5:
+  image: ./../assets/images/projets/explicite/img-expli-5.jpg
   alt: presentational
 ---
 
