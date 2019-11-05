@@ -32,9 +32,15 @@ export default class Project4 extends React.Component {
       <div style={{ backgroundColor: "white" }}>
         <div className="wrapper">
           <header className="header-project">
-            <p className="header__page-index">
+            <AniLink
+              cover
+              to="/"
+              bg="black"
+              direction="right"
+              className="header__page-index"
+            >
               <img src={Logo} alt="KLC Logo" />
-            </p>
+            </AniLink>
             <div className="header__close">
               <AniLink cover to="/" bg="black" direction="right">
                 <p className="close-text">close</p>
@@ -86,10 +92,15 @@ export default class Project4 extends React.Component {
           </div>
         </div>
         <div className="next">
-          <p className="next__project-title">{frontmatter.title}</p>
+          <p className="next__project-title">{frontmatter.nextProject.name}</p>
 
           <p className="next__project">
-            <AniLink cover to="/" bg="black" direction="left">
+            <AniLink
+              cover
+              to={frontmatter.nextProject.name}
+              bg="black"
+              direction="right"
+            >
               Next project
             </AniLink>
           </p>
@@ -110,6 +121,10 @@ export const pageQuery = graphql`
         title
         subtitle
         theme
+        nextProject {
+          name
+          path
+        }
         image1 {
           image {
             childImageSharp {

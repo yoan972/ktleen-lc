@@ -7,6 +7,9 @@ date: 2019-07-10
 path: /explicite-info
 img: ./../assets/images/projets/cover-explicite.jpg
 alt: explicite
+nextProject:
+  name: Crée ton avenir
+  path: /cree-ton-avenir
 image1:
   image: ./../assets/images/projets/explicite/v-1@2x.jpg
   alt: presentational

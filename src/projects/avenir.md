@@ -7,6 +7,9 @@ date: 2019-07-10
 path: /cree-ton-avenir
 img: ./../assets/images/projets/cover-cta.jpg
 alt: cree ton avenir
+nextProject:
+  name: Worldia.fr
+  path: /worldia
 image1:
   image: ./../assets/images/projets/avenir/img-cta-1.jpg
   alt: presentational
