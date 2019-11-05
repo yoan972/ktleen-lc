@@ -138,10 +138,17 @@
     height: 460px;
     background-color: #466679;
     z-index: -1;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      top: 39vw;
+      height: 45vw;
+    }
   }
   .project__image2 {
     background: linear-gradient(#ffffff 24.5%, #e3edf2 24.5%);
     padding-bottom: 100px;
+    position: relative;
 
     @media (max-width: 768px) {
       padding: 0 20px 40px;
@@ -150,6 +157,22 @@
     div {
       max-width: 940px;
       margin: auto;
+    }
+  }
+  .project__image2::after {
+    content: "";
+    position: absolute;
+    top: 3.3rem;
+    right: 0;
+    width: 92%;
+    height: 450px;
+    background-color: #e88b3e;
+    z-index: -1;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      top: 5vw;
+      height: 43.4vw;
     }
   }
 }
