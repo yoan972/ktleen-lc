@@ -176,3 +176,74 @@
     }
   }
 }
+
+#renault {
+  .project__image1 {
+    background: linear-gradient(#ffffff 14%, #fff3f2 14%);
+    padding-bottom: 10px;
+
+    @media (max-width: 768px) {
+      padding: 0 20px 40px;
+    }
+
+    div {
+      max-width: 1440px;
+      margin: auto;
+    }
+  }
+  .project__image2 {
+    padding-top: 100px;
+
+    @media (max-width: 768px) {
+      padding: 40px 20px;
+    }
+
+    div {
+      max-width: 940px;
+      object-fit: contain;
+      margin: auto;
+    }
+  }
+  .project__image3 {
+    background-color: #fff4e2;
+    padding-top: 100px;
+
+    @media (max-width: 768px) {
+      padding: 40px 20px;
+    }
+
+    div {
+      max-width: 940px;
+      object-fit: contain;
+      margin: auto;
+    }
+  }
+  .project__image4 {
+    background: linear-gradient(#fff4e2 62%, #ffffff 62%);
+    padding-bottom: 100px;
+
+    @media (max-width: 768px) {
+      padding: 40px 20px;
+    }
+
+    div {
+      max-width: 940px;
+      object-fit: contain;
+      margin: auto;
+    }
+  }
+  .project__image5 {
+    background: linear-gradient(#ffffff 55%, #e5f8ff 55%);
+    padding-bottom: 100px;
+
+    @media (max-width: 768px) {
+      padding: 40px 20px;
+    }
+
+    div {
+      max-width: 940px;
+      object-fit: contain;
+      margin: auto;
+    }
+  }
+}

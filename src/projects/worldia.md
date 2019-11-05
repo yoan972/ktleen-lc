@@ -8,8 +8,8 @@ path: /worldia
 img: ./../assets/images/projets/cover-worldia.jpg
 alt: worldia
 nextProject:
-  name: La Grande Epicerie de Paris
-  path: /grande-epicerie-de-paris
+  name: Renault Retail
+  path: /renault-retail
 image1:
   image: ./../assets/images/projets/worldia/img-worldia-1.jpg
   alt: worldia

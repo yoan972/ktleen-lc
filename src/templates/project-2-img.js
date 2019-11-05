@@ -83,7 +83,7 @@ export default class Project4 extends React.Component {
           <p className="next__project">
             <AniLink
               cover
-              to={frontmatter.nextProject.name}
+              to={frontmatter.nextProject.path}
               bg="black"
               direction="right"
             >
