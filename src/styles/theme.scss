@@ -247,3 +247,54 @@
     }
   }
 }
+
+#oncv {
+  .project__image1 {
+    background: linear-gradient(#ffffff 12%, #e2f1ff 12%);
+    padding-bottom: 100px;
+
+    @media (max-width: 768px) {
+      padding: 40px 20px;
+    }
+
+    div {
+      max-width: 940px;
+      object-fit: contain;
+      margin: auto;
+    }
+  }
+  .project__image2 {
+    padding-top: 100px;
+
+    @media (max-width: 768px) {
+      padding: 40px 20px;
+    }
+
+    div {
+      max-width: 940px;
+      object-fit: contain;
+      margin: auto;
+    }
+  }
+  .project__image3 {
+    background: linear-gradient(
+      #ffffff 6%,
+      #e2f1ff 6%,
+      #e2f1ff 6%,
+      #e2f1ff 16%,
+      #ffffff 16%
+    );
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @media (max-width: 768px) {
+      padding: 40px 20px;
+    }
+
+    div {
+      max-width: 940px;
+      object-fit: contain;
+      margin: auto;
+    }
+  }
+}
