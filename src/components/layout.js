@@ -1,3 +1,3 @@
 import React from "react"
 
-export default ({ children }) => <main className="wrapper">{children}</main>
+export default ({ children }) => <main>{children}</main>

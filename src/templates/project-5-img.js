@@ -1,10 +1,11 @@
 import React, { Component } from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import closeIcon from "../assets/images/close.svg"
 import "../styles/project.scss"
 import Footer from "../components/footer"
 import Logo from "../assets/images/logo.svg"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export default class Project5 extends Component {
   componentDidMount() {
@@ -28,17 +29,17 @@ export default class Project5 extends Component {
     const { frontmatter, html } = markdownRemark
 
     return (
-      <div>
+      <div style={{ backgroundColor: "white" }}>
         <div className="wrapper">
           <header className="header-project">
             <p className="header__page-index">
               <img src={Logo} alt="KLC Logo" />
             </p>
             <div className="header__close">
-              <Link to="/">
+              <AniLink cover to="/" bg="black" direction="right">
                 <p className="close-text">close</p>
                 <img src={closeIcon} className="close" alt="close cross" />
-              </Link>
+              </AniLink>
             </div>
           </header>
         </div>
@@ -95,7 +96,9 @@ export default class Project5 extends Component {
           <p className="next__project-title">{frontmatter.title}</p>
 
           <p className="next__project">
-            <Link to="/">Next project</Link>
+            <AniLink cover to="/" bg="black" direction="left">
+              Next project
+            </AniLink>
           </p>
         </div>
         <Footer />

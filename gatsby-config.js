@@ -23,6 +23,12 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/assets/images/projets/`
       }
+    },
+    {
+      resolve: `gatsby-plugin-transition-link`,
+      options: {
+        layout: require.resolve(`./src/components/layout.js`)
+      }
     }
   ]
 }

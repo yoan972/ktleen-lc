@@ -1,11 +1,11 @@
 import React from "react"
 import "../styles/main.scss"
-import Layout from "../components/layout"
 import Logo from "../assets/images/logo.svg"
 import handScroll from "../assets/images/hand-scroll.svg"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Footer from "../components/footer"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export default ({ data }) => {
   const handleOpacityHoverEffect = elem => {
@@ -20,7 +20,7 @@ export default ({ data }) => {
     })
   }
   return (
-    <Layout>
+    <div className="wrapper">
       <nav className="menu">
         <div className="menu__item">works</div>
         <div className="menu__item">art director</div>
@@ -52,14 +52,17 @@ export default ({ data }) => {
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <li className="works-list__item" key={node.id}>
               <div className="work">
-                <Link
+                <AniLink
+                  cover
                   to={node.frontmatter.path}
+                  bg="black"
+                  direction="left"
                   className="work__title"
                   onMouseEnter={e => handleOpacityHoverEffect(e.target)}
                   onMouseLeave={e => handleOpacityHoverEffect(e.target)}
                 >
                   {node.frontmatter.title}
-                </Link>
+                </AniLink>
                 <div className="work__subtitle">
                   <p>{node.frontmatter.subtitle}</p>
                 </div>
@@ -108,7 +111,7 @@ export default ({ data }) => {
         </div>
       </section>
       <Footer />
-    </Layout>
+    </div>
   )
 }
 
