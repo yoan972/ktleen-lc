@@ -1,5 +1,6 @@
 import React from "react"
 import logoIcon from "../assets/images/logo-icon.svg"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Footer = () => {
   return (
@@ -19,9 +20,11 @@ const Footer = () => {
           pinterest
         </a>
       </p>
-      <div className="footer__logo">
-        <img src={logoIcon} alt="KLC Logo" />
-      </div>
+      <AniLink cover to="/" bg="black" direction="right">
+        <div className="footer__logo">
+          <img src={logoIcon} alt="KLC Logo" />
+        </div>
+      </AniLink>
     </footer>
   )
 }
