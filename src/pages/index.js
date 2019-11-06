@@ -63,7 +63,7 @@ export default ({ data }) => {
                 >
                   {node.frontmatter.title}
                 </AniLink>
-                <div className="work__subtitle">
+                <div className="subtitle">
                   <p>{node.frontmatter.subtitle}</p>
                 </div>
                 <div className="work__img">

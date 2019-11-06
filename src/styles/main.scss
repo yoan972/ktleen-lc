@@ -170,7 +170,7 @@
 .work {
   position: relative;
 }
-.work__subtitle {
+.subtitle {
   position: relative;
   z-index: 10;
   opacity: 0;
@@ -183,10 +183,10 @@
   letter-spacing: normal;
   color: #ffffff;
 }
-.work__subtitle p {
+.subtitle p {
   display: inline-block;
 }
-.work__subtitle:before {
+.subtitle:before {
   content: "";
   width: 30px;
   height: 2px;
@@ -243,7 +243,7 @@
 .current {
   opacity: 1;
 }
-.work__title:hover ~ .work__subtitle {
+.work__title:hover ~ .subtitle {
   opacity: 1;
 }
 .work__title:hover ~ .work__img {
@@ -255,7 +255,7 @@
   .work__title {
     font-size: 18px;
   }
-  .work__subtitle {
+  .subtitle {
     font-size: 14px;
   }
   .menu {
