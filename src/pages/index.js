@@ -66,7 +66,6 @@ export default ({ data }) => {
                 <div className="subtitle">
                   <p>{node.frontmatter.subtitle}</p>
                 </div>
-                <div className="subtitle"></div>
                 <div className="work__img">
                   <Img
                     alt={node.frontmatter.alt}
