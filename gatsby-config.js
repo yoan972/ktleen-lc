@@ -53,7 +53,6 @@ module.exports = {
         icon: `src/images/icon.svg` // This path is relative to the root of the site.
       }
     },
-    `gatsby-plugin-offline`,
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-offline`
   ]
 }
