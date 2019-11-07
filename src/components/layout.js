@@ -11,6 +11,13 @@ export default ({ children }) => (
         name="description"
         content="I’m Katleen, a french graphic and digital designer based in Bordeaux !"
       />
+      <meta property="og:title" content="Katleen Lc" />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="../../static/icon.svg" />
+      <meta
+        property="og:description"
+        content="I’m Katleen, a french graphic and digital designer based in Bordeaux !"
+      />
     </Helmet>
     <div>{children}</div>
   </main>
