@@ -4,7 +4,7 @@
 .menu {
   display: flex;
   justify-content: space-between;
-  margin-top: 61px;
+  margin-top: 20px;
 }
 .menu__item {
   font-size: 14px;
@@ -29,10 +29,13 @@
 .logo {
   width: 100%;
   max-width: 345px;
+  @media (max-width: 480px) {
+    max-width: 223px;
+  }
 }
 .header__hand-scroll {
   width: 20px;
-  margin: 106px auto;
+  margin: 106px auto 0;
 }
 .section {
   text-align: center;
@@ -57,7 +60,7 @@
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.2;
+  line-height: 1.4;
   letter-spacing: normal;
   color: #000000;
 }
@@ -66,8 +69,10 @@
   font-weight: bold;
 }
 .about {
-  margin-top: 76px;
   padding: 0px 25px;
+  @media (min-width: 480px) {
+    margin-top: 76px;
+  }
 }
 .hoverlined {
   display: inline-block;
@@ -218,7 +223,7 @@
   @media (max-width: 480px) {
     width: 100%;
     left: 0;
-    top: -185%;
+    top: -145%;
   }
 }
 .work__img:after {
@@ -277,5 +282,44 @@
   .footer p {
     width: 55%;
     padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .menu__item {
+    font-size: 12px;
+  }
+  .section {
+    padding: 0px 39px;
+  }
+  .section__title {
+    font-size: 12px;
+  }
+  .section__text,
+  .work__title {
+    font-size: 24px;
+  }
+  .work__title {
+    letter-spacing: 4px;
+  }
+  .works-list {
+    margin-bottom: 0;
+  }
+  .profile__title {
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .profile__title,
+  .profile__text {
+    font-size: 14px;
+  }
+  .profile__details h3 {
+    margin-top: 40px;
+  }
+  .footer p {
+    padding: 10px 10px 10px 40px;
+  }
+  .footer__logo {
+    padding-right: 40px;
   }
 }

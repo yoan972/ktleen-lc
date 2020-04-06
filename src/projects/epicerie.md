@@ -1,6 +1,6 @@
 ---
 templateKey: project-7-img
-title: La Grande Epicerie de Paris
+title: La Grande Epicerie
 subtitle: UI design
 theme: epicerie
 date: 2019-11-05

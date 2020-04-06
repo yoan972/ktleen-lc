@@ -8,6 +8,17 @@ import Footer from "../components/footer"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 export default ({ data }) => {
+  const handleScrollTo = elem => {
+    console.log(elem.innerText)
+    let scrolltarget
+    if (elem.innerText === "WORKS") {
+      scrolltarget = document.getElementById("works")
+    } else if (elem.innerText === "CONTACT") {
+      scrolltarget = document.getElementById("contact")
+    }
+    const scrolltargetPos = scrolltarget.offsetTop
+    window.scrollTo({ top: scrolltargetPos, behavior: "smooth" })
+  }
   const handleOpacityHoverEffect = elem => {
     elem.classList.contains("current")
       ? elem.classList.remove("current")
@@ -22,9 +33,21 @@ export default ({ data }) => {
   return (
     <div className="wrapper">
       <nav className="menu">
-        <div className="menu__item">works</div>
+        <div
+          className="menu__item"
+          style={{ cursor: "pointer" }}
+          onClick={e => handleScrollTo(e.target)}
+        >
+          works
+        </div>
         <div className="menu__item">art director</div>
-        <div className="menu__item">contact</div>
+        <div
+          className="menu__item"
+          style={{ cursor: "pointer" }}
+          onClick={e => handleScrollTo(e.target)}
+        >
+          contact
+        </div>
       </nav>
       <header className="header">
         <div className="header__logo">
@@ -44,10 +67,8 @@ export default ({ data }) => {
           <span className="hoverlined">designer</span>&nbsp;based in Bordeaux !
         </h1>
       </section>
-      <section className="work section">
-        <h2 className="section__title" id="works">
-          works
-        </h2>
+      <section className="work section" id="works">
+        <h2 className="section__title">works</h2>
         <ul className="works-list">
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <li className="works-list__item" key={node.id}>
@@ -103,10 +124,16 @@ export default ({ data }) => {
               Art direction, UI Design, branding, Illustration, typography,
               photomontage, retouche photo…
             </p>
-            <h3 className="profile__title">Contact</h3>
-            <p className="profile__text profile__contact">
+            <h3 className="profile__title" id="contact">
+              Contact
+            </h3>
+            <a
+              href="mailto:contact@katleenlc.com"
+              className="profile__text profile__contact"
+              id="contact"
+            >
               contact@katleenlc.com
-            </p>
+            </a>
           </div>
         </div>
       </section>
